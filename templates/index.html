@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../static/favicon.ico">
+
+    <title>Films</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/album.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">A collection of short films assembled for your entertainment.</p>
+            </div>
+            <div class="col-sm-4 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand">Flicks</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Films</h1>
+          <p class="lead text-muted">A collection of short films assembled for your entertainment.</p>
+          <p>
+            <a href="#" class="btn btn-primary">Main call to action</a>
+            <a href="#" class="btn btn-secondary">Secondary action</a>
+          </p>
+        </div>
+      </section>
+
+      <div class="album text-muted">
+        <div class="container">
+
+          <div class="row">
+
+		  {% for item in data %}
+
+	      <div class="card">
+		      <a href={{item[1]}}>
+<img src={{item[2]}} alt={{item[3]}} width="250" height="200" border="0">
+</a>
+
+              <p class="card-text">{{item[4]}}</p>
+            </div>
+                  {% endfor %}
+	    
+
+
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Template Album example is &copy; Bootstrap!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+  </body>
+</html>
